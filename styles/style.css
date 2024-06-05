@@ -3,23 +3,60 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 :root {
     --padding-left: 1.25rem;
+    --padding-top: .75rem;
+
 }
 
 .body {
+
 }
 
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-top) 0 0 var(--padding-left);
 
 }
 
+.burger-bar {
+    padding-right: var(--padding-left);
+}
+
+.main {
+    min-height: 100vh;
+}
+
+.links-header {
+    display: none;
+}
+
 .footer {
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
     max-width: 100vw;
-    font-family: Inter;
     background-color: #070127;
     color: #fff;
-    padding: 0 2.1875rem 0 1.25rem;
+    padding: calc( var(--padding-left) * 2.8) 2.1875rem 0 var(--padding-left);
+}
+
+.footer span {
+    font-weight: 500;
+    line-height: 1.625rem;
+    font-size: 1rem;
+}
+
+/*arrumar*/
+footer img {
+    width: 8.75rem;
+    height: 4.125rem;
 }
 
 .icons::after {
