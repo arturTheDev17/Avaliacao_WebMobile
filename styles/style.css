@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --padding-left: 1.25rem;
+}
+
+.body {
+}
+
+.header {
+
+}
+
+.footer {
+    max-width: 100vw;
+    font-family: Inter;
+    background-color: #070127;
+    color: #fff;
+    padding: 0 2.1875rem 0 1.25rem;
+}
+
+.icons::after {
+    display: block;
+    content: "";
+    width: 20rem;
+    height: 0.0625rem;
+    background-color: #7E8492;
+}
+
