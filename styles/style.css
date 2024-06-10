@@ -15,6 +15,14 @@
 
 }
 
+#tables {
+    width: 100%;
+}
+
+.div-company {
+    background-color: #5828E3;
+}
+
 .header {
     display: flex;
     flex-direction: row;
