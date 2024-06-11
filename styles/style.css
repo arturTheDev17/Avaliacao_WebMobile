@@ -5,13 +5,10 @@
 
 
 :root {
-    --padding-left: 1.25rem;
-    --padding-top: .75rem;
+    --margin-top: 3.2vw;
     --margin-left: calc(28vw/3);
-    --margin-right: calc(16vw/3)
-}
-
-.body {
+    --margin-right: calc(16vw/3);
+    --font-family: "Inter", sans-serif;
 
 }
 
@@ -28,26 +25,102 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: var(--padding-top) 0 0 var(--padding-left);
+    padding: var(--margin-top) var(--margin-right) 0;
 
 }
 
-.burger-bar {
-    padding-right: var(--padding-left);
-}
 
 .main {
     min-height: 100vh;
+    max-width: 100vw;
+    font-family: var(--font-family);
+    padding-left: var(--margin-right);
+
+}
+
+#section1 {
+    padding-top: 2.5rem;
+}
+
+#section1 h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    padding-top: 1rem;
+    font-weight: 600;
+}
+
+.arrow-point {
+    padding-left: var(--margin-right);
+    display: flex;
+    flex-direction: row;
+    line-height: 1.625rem;
+    color: #7E8492;
+    font-weight: 500;
+    gap: .5rem;
+    padding-right: 1rem;
+}
+.arrow-point img {
+    /*width: 4.5625rem;
+    height: 4.9375rem;*/
+    padding-bottom: 1rem;
+}
+
+.arrow-point span {
+    padding-top: 3.5rem;
 }
 
 .links-header {
     display: none;
 }
 
+#section1 .buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: .75rem;
+    padding-top: calc( 2 * var(--margin-right));
+    padding-bottom: 2rem;
+}
+
+.button {
+    padding: 14px 16px;
+    background-color: #5828E3;
+    border-radius: 6.25rem;
+}
+
+.button a {
+    padding: .5rem;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.3125rem;
+    }
+
+.button-negative {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #EDEDED;
+    padding: 14px 16px;
+    background-color: #fff;
+    border-radius: 6.25rem;
+}
+
+.button-negative a {
+    padding: 0 .5rem 0 .25rem;
+    font-size: 14px;
+    text-decoration: none;
+    color: #5828E3;
+    font-weight: 700;
+    line-height: 1.3125rem;
+    }
+
+
 .footer {
     display: flex;
     flex-direction: column;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family);
     max-width: 100vw;
     background-color: #070127;
     color: #fff;
@@ -131,5 +204,8 @@
     height: 4.125rem;
 }
 
+.div-company_big {
+    display: none;
+}
 
 
