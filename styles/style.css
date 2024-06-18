@@ -273,6 +273,16 @@
     list-style: none;
 }
 
+#pricing article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    background-color: #fff;
+    border-radius: 16px;
+
+}
+
 #redonda {
     padding: 0 var(--margin-right);
     margin: 2.5rem 0 3.5rem;
