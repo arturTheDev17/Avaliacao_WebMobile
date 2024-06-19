@@ -61,6 +61,30 @@
     line-height: 1.3125rem;
 }
 
+.CTA img {
+    display: none;
+}
+
+#customers {
+    padding: 2.25rem var(--margin-right) 0;
+}
+
+#customers .desktop {
+    display: none;
+}
+
+#customers .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#customers article {
+    padding: 1rem;
+}
+
 .div-company {
     display: flex;
     margin-top: 3rem;
@@ -76,17 +100,6 @@
 
 .div-company_big {
     display: none;
-}
-
-.highlight {
-    color: #5828E3;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 21px;
-    padding: 6px 16px;
-    border-radius: 100px;
-    background-color: #f3edff;
-    margin-bottom: 1rem;
 }
 
 .footer {
@@ -145,6 +158,17 @@
 
 }
 
+.highlight {
+    color: #5828E3;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 6px 16px;
+    border-radius: 100px;
+    background-color: #f3edff;
+    margin-bottom: 1rem;
+}
+
 .icons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -158,6 +182,12 @@
 
 .icons i {
     transform: scale(1.25);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .last::before {
@@ -235,30 +265,43 @@
     padding: 2.25rem var(--margin-right) 0;
 }
 
-#customers {
-    padding: 2.25rem var(--margin-right) 0;
+/*
+ARRUMAR OS PADDINGS DE FORA
+*/
+#pricing #basic ul {
+    align-self: flex-start;
+    padding: 1rem 0 0;
 }
 
-#customers .title {
+#pricing .price {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2rem;
+    justify-content: center;
+    align-self: flex-start;
 }
 
-#customers article {
-    padding: 1rem;
+#pricing .price h3 {
+    font-size: 2.5rem;
+    margin: 0;
 }
 
-#customers .desktop {
-    display: none;
+#pricing .price span {
+    padding-left: .125rem;
+    align-self: center;
+    line-height: 1.625rem;
+    color: #7E8492;
+    font-weight: 500;
 }
 
-.info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+#pricing .subtitle {
+    margin-top: 2.5rem;
+    align-self: flex-start;
+    padding-bottom: .5rem;
+}
+
+#pricing .subtitle h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5rem;
 }
 
 #pricing .title {
@@ -269,10 +312,6 @@
     margin-bottom: 2rem;
 }
 
-#pricing li {
-    list-style: none;
-}
-
 #pricing article {
     display: flex;
     flex-direction: column;
@@ -280,7 +319,75 @@
     padding: 2.5rem 1.5rem;
     background-color: #fff;
     border-radius: 16px;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
 
+#pricing article .button {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#pricing article .button a {
+    font-size: 1rem;
+}
+
+#pricing article .title {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#pricing article .title .highlight {
+    margin-right: 4rem;
+    margin-bottom: 0;
+    padding: 1.5px 10.5px;
+}
+
+#pricing article .title h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin: 0;
+    margin-right: .5rem;
+}
+
+#pricing article .title span {
+    margin-top: .5rem;
+    text-align: left;
+    color: #1D1E25;
+    font-weight: 400;
+}
+
+#pricing article h3 {
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 1rem; 
+}
+
+#pricing article h4 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    margin-bottom: .25rem;
+    font-weight: 600; 
+}
+
+#pricing article ul {
+    padding: 2rem 0 1rem;
+    gap: 16px;
+}
+
+#pricing article ul li {
+    display: flex;
+    flex-direction: row;
+    column-gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+#pricing li {
+    list-style: none;
 }
 
 #redonda {
