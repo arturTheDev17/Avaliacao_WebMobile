@@ -3,6 +3,35 @@
     padding: 0;
 }
 
+:root {
+    --margin-top: 3.2vw;
+    --margin-left: calc(28vw/3);
+    --margin-right: calc(16vw/3);
+    --font-family: "Inter", sans-serif;
+    --small-spacing: calc(64vw/15);
+}
+
+.CTA {
+    padding-top: 3.5rem;
+    padding-left: var(--margin-right);
+    padding-right: var(--margin-right);
+}
+
+.CTA .button {
+    text-align: center;
+    width: 50%;
+    padding: 16.5px 9.75px;
+    margin: 2rem 0;
+}
+
+.CTA .button a {
+    font-size: 16px;
+}
+
+.CTA img {
+    display: none;
+}
+
 .arrow-point {
     padding-left: var(--margin-right);
     display: flex;
@@ -11,13 +40,13 @@
     color: #7E8492;
     font-weight: 500;
     gap: .5rem;
-    padding-right: 1rem;
+    padding-right: var(--small-spacing);
 }
 
 .arrow-point img {
     /*width: 4.5625rem;
     height: 4.9375rem;*/
-    padding-bottom: 1rem;
+    padding-bottom: var(--small-spacing);
 }
 
 .arrow-point span {
@@ -61,12 +90,26 @@
     line-height: 1.3125rem;
 }
 
-.CTA img {
-    display: none;
+.customer-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 #customers {
-    padding: 2.25rem var(--margin-right) 0;
+    padding: 2.25rem var(--margin-right) 3.5rem;
+}
+
+#customers .button {
+    margin: 1.5rem 0 2.5rem;
+    text-align: center;
+    width: 50%;
+    padding: 16.5px 15.25px;
+    justify-self: center;
+}
+
+#customers .button a {
+    font-size: 16px;
 }
 
 #customers .desktop {
@@ -82,7 +125,24 @@
 }
 
 #customers article {
-    padding: 1rem;
+    padding: var(--small-spacing);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#customers article img {
+    align-self: flex-start;
+}
+
+#customers h3 {
+    margin: 0;
+}
+
+#customers span {
+    font-weight: 500;
+    line-height: 1.625rem;
+    color: #7E8492;
 }
 
 .div-company {
@@ -94,8 +154,7 @@
 }
 
 .div-company img {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: var(--small-spacing) 0;
 }
 
 .div-company_big {
@@ -166,7 +225,7 @@
     padding: 6px 16px;
     border-radius: 100px;
     background-color: #f3edff;
-    margin-bottom: 1rem;
+    margin-bottom: var(--small-spacing);
 }
 
 .icons {
@@ -175,7 +234,7 @@
     grid-template-rows: 1fr;
     column-gap: 1.5rem;
     width: 152px;
-    padding: 1rem 0rem 1.5rem .25rem;
+    padding: var(--small-spacing) 0rem 1.5rem .25rem;
     height: 1.25rem;
 
 }
@@ -186,8 +245,8 @@
 
 .info {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
 }
 
 .last::before {
@@ -222,7 +281,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     list-style: none;
-    gap: 1rem;
+    gap: var(--small-spacing);
     padding: 2rem 0rem 0rem 0rem;
 }
 
@@ -237,15 +296,21 @@
     color: #1D1E25;
 }
 
+.name h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+
 .pannel {
     border-radius: 1rem;
     background-color: #F3EDFF;
-    padding: 1rem;
+    padding: var(--small-spacing);
     margin-bottom: 1.5rem;
 }
 
 .pannel h4 {
-    padding: 2rem 0 1rem;
+    padding: 2rem 0 var(--small-spacing);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.95rem;
@@ -262,15 +327,19 @@
 
 #pricing {
     background-color: #f6f4ff;
-    padding: 2.25rem var(--margin-right) 0;
+    padding: 2.25rem var(--margin-right) 3.5rem;
 }
 
 /*
 ARRUMAR OS PADDINGS DE FORA
 */
+#pricing #basic {
+    margin: 0;
+}
+
 #pricing #basic ul {
     align-self: flex-start;
-    padding: 1rem 0 0;
+    padding: var(--small-spacing) 0 0;
 }
 
 #pricing .price {
@@ -364,7 +433,7 @@ ARRUMAR OS PADDINGS DE FORA
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin-bottom: 1rem; 
+    margin-bottom: var(--small-spacing); 
 }
 
 #pricing article h4 {
@@ -375,7 +444,7 @@ ARRUMAR OS PADDINGS DE FORA
 }
 
 #pricing article ul {
-    padding: 2rem 0 1rem;
+    padding: 2rem 0 var(--small-spacing);
     gap: 16px;
 }
 
@@ -383,7 +452,7 @@ ARRUMAR OS PADDINGS DE FORA
     display: flex;
     flex-direction: row;
     column-gap: .75rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--small-spacing);
 }
 
 #pricing li {
@@ -393,14 +462,6 @@ ARRUMAR OS PADDINGS DE FORA
 #redonda {
     padding: 0 var(--margin-right);
     margin: 2.5rem 0 3.5rem;
-}
-
-:root {
-    --margin-top: 3.2vw;
-    --margin-left: calc(28vw/3);
-    --margin-right: calc(16vw/3);
-    --font-family: "Inter", sans-serif;
-
 }
 
 #section1 {
@@ -421,7 +482,7 @@ ARRUMAR OS PADDINGS DE FORA
     flex-direction: column;
     font-size: 2.5rem;
     line-height: 3rem;
-    padding-top: 1rem;
+    padding-top: var(--small-spacing);
     font-weight: 600;
 }
 
@@ -432,11 +493,11 @@ ARRUMAR OS PADDINGS DE FORA
 }
 
 #section2 #big-number {
-    padding: 1rem 0;
+    padding: var(--small-spacing) 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: var(--small-spacing);
 }
 
 #section2 #big-number h4 {
@@ -490,7 +551,7 @@ ARRUMAR OS PADDINGS DE FORA
 .title h3 {
     font-size: 32px;
     line-height: 2.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--small-spacing);
     font-weight: 600;
 }
 
