@@ -161,6 +161,11 @@
     display: none;
 }
 
+.logo-div {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -559,4 +564,16 @@ ARRUMAR OS PADDINGS DE FORA
     line-height: 1.625rem;
     color: #7E8492;
     font-weight: 500;
+}
+
+@media screen and ( min-width: 844px ) {
+   .footerSect1 {
+    display: flex;
+    flex-direction: row;
+    gap: calc(3805vw/72);
+   }
+
+   .footer {
+    padding-top: 4rem;
+   }
 }
