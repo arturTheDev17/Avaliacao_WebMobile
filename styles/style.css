@@ -829,7 +829,7 @@ ARRUMAR OS PADDINGS DE FORA
         flex-direction: column;
     }
 
-    #pannels .title h3 {
+    #pannels .title h3 , #customers .title h3 , #pricing .title h3 {
         font-family: "Poppins", sans-serif;
         font-size: 56px;
         line-height: 120%;
@@ -894,11 +894,6 @@ ARRUMAR OS PADDINGS DE FORA
 
     #pricing .highlight {
         margin-bottom: 1rem;
-    }
-
-    #pricing .title h3 {
-        font-family: "Poppins", sans-serif;
-        font-size: 56px;
     }
 
     #pricing #basic {
@@ -975,9 +970,14 @@ ARRUMAR OS PADDINGS DE FORA
         align-self: flex-end;
     }
 
-    #customers {
-
+    #customers .title {
+        margin-bottom: 0;
     }
+
+    #customers .title h3 {
+        width: 50%;
+    }
+
     #customers .opinions {
         display: grid;
         grid-template-columns: repeat(6 , 1fr);
@@ -985,15 +985,30 @@ ARRUMAR OS PADDINGS DE FORA
 
     #customers .opinions article {
         grid-column:span 2;
-        padding: 80px 40px;
+        padding: 80px 40px 0;
 
     }
     #customers .opinions #larger {
         grid-column:span 3;
     }
 
-    #customers  .button {
+    #customers .button {
         width: 13%;
+        margin-top: 80px;
+    }
+
+    #customers .highlight {
+        margin-bottom: 1rem;
+    }
+
+    .CTA {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .CTA img {
+        display: block;
     }
 }
 
