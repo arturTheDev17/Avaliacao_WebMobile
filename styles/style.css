@@ -3,12 +3,8 @@
     padding: 0;
 }
 
-:root {
-    --margin-top: 3.2vw;
-    --margin-left: calc(28vw/3);
-    --margin-right: calc(16vw/3);
-    --font-family: "Inter", sans-serif;
-    --small-spacing: calc(64vw/15);
+ .last .desktop {
+    display: none;
 }
 
 .CTA {
@@ -21,11 +17,11 @@
     text-align: center;
     width: 50%;
     padding: 16.5px 9.75px;
-    margin: 2rem 0;
+    margin: var(--medium) 0;
 }
 
 .CTA .button a {
-    font-size: 16px;
+    font-size: var(--small);
 }
 
 .CTA img {
@@ -40,19 +36,20 @@
     color: #7E8492;
     font-weight: 500;
     gap: .5rem;
-    padding-right: var(--small-spacing);
+    padding-right: var(--small);
 }
 
 .arrow-point img {
-    padding-bottom: var(--small-spacing);
+    padding-bottom: var(--small);
 }
 
 .arrow-point span {
     padding-top: 3.5rem;
 }
 
-.body {
-    font-family: var(--font-family);
+#basic-plan {
+    display: flex;
+    align-items: center;
 }
 
 #big_table {
@@ -66,15 +63,8 @@
     height: 485px;
 }
 
-.button-negative , .button {
-    padding: 14px 16px;
-    border-radius: 6.25rem;
-}
-
-.button-negative a , .button a {
-    font-size: 14px;
-    text-decoration: none;
-    line-height: 1.3125rem;
+.body {
+    font-family: var(--main-font);
 }
 
 .button {
@@ -95,10 +85,21 @@
     align-items: center;
 }
 
+.button-negative , .button {
+    padding: 14px var(--small);
+    border-radius: 6.25rem;
+}
+
 .button-negative a {
     padding: 0 .5rem 0 .25rem;
     color: #5828E3;
     font-weight: 700;
+}
+
+.button-negative a , .button a {
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 1.3125rem;
 }
 
 .customer-header {
@@ -114,7 +115,7 @@
 }
 
 #customers .button {
-    margin: 1.5rem 0 2.5rem;
+    margin: calc( 1.5 * var(--small) ) 0 2.5rem;
     text-align: center;
     width: 50%;
     padding: 16.5px 15.25px;
@@ -122,7 +123,7 @@
 }
 
 #customers .button a {
-    font-size: 16px;
+    font-size: var(--small);
 }
 
 #customers .desktop {
@@ -134,14 +135,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: var(--medium);
 }
 
 #customers article {
-    padding: var(--small-spacing);
+    padding: var(--small);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: calc( 1.5 * var(--small) );
 }
 
 #customers article img , #customers .desktop img {
@@ -168,16 +169,18 @@
 }
 
 .div-company img , .div-company_big img {
-    padding: var(--small-spacing) 0;
+    padding: var(--small) 0;
 }
 
 .div-company_big {
     display: none;
 }
 
-.logo-div {
+.features {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    column-gap: var(--medium);
 }
 
 .footer {
@@ -189,14 +192,6 @@
     padding: calc(var(--margin-left) * 2.8) var(--margin-left) 0 var(--margin-right);
 }
 
-#pannels .pannel #feature {
-    width: 56px;
-}
-
- .last .desktop {
-    display: none;
-}
-
 .footer .last .mobile {
     display: flex;
     flex-wrap: wrap;
@@ -205,7 +200,7 @@
 }
 
 .footer .last span {
-    padding: 1.5rem 0rem 0rem 0rem;
+    padding: calc( 1.5 * var(--small) ) 0rem 0rem 0rem;
 }
 
 .footer .store a {
@@ -229,8 +224,8 @@
 .footer span {
     font-weight: 400;
     line-height: 1.625rem;
-    font-size: 1rem;
-    padding-bottom: 2rem;
+    font-size: var(--small);
+    padding-bottom: var(--medium);
     padding-top: .5rem;
 }
 
@@ -252,19 +247,19 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
-    padding: 6px 16px;
+    padding: 6px var(--small);
     border-radius: 100px;
     background-color: #f3edff;
-    margin-bottom: var(--small-spacing);
+    margin-bottom: var(--small);
 }
 
 .icons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    column-gap: 1.5rem;
+    column-gap: calc( 1.5 * var(--small) );
     width: 152px;
-    padding: var(--small-spacing) 0rem 1.5rem .25rem;
+    padding: var(--small) 0rem calc( 1.5 * var(--small) ) .25rem;
     height: 1.25rem;
 
 }
@@ -293,7 +288,7 @@
     flex-direction: row;
     align-items: center;
     column-gap: .5rem;
-    margin-top: 2rem;
+    margin-top: var(--medium);
 }
 
 .learn-more a {
@@ -311,12 +306,17 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     list-style: none;
-    gap: var(--small-spacing);
-    padding: 2rem 0rem 0rem 0rem;
+    gap: var(--small);
+    padding: var(--medium) 0rem 0rem 0rem;
 }
 
 .links-header {
     display: none;
+}
+
+.logo-div {
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
@@ -325,21 +325,27 @@
     color: #1D1E25;
 }
 
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .name h3 {
-    font-size: 16px;
+    font-size: var(--small);
     font-weight: 700;
     line-height: 1.625rem;
 }
 
 .pannel {
-    border-radius: 1rem;
+    border-radius: var(--small);
     background-color: #F3EDFF;
-    padding: var(--small-spacing);
-    margin-bottom: 1.5rem;
+    padding: var(--small);
+    margin-bottom: calc( 1.5 * var(--small) );
 }
 
 .pannel h4 {
-    padding: 2rem 0 var(--small-spacing);
+    padding: var(--medium) 0 var(--small);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.95rem;
@@ -354,21 +360,26 @@
     margin-bottom: 3.5rem;
 }
 
+#pannels {
+    padding: 0 var(--margin-right) 0 var(--margin-right)
+}
+
+#pannels .pannel #feature {
+    width: 56px;
+}
+
 #pricing {
     background-color: #f6f4ff;
     padding: 2.25rem var(--margin-right) 3.5rem;
 }
 
-/*
-ARRUMAR OS PADDINGS DE FORA
-*/
 #pricing #basic {
     align-items: flex-start;
     margin: 0;
 }
 
 #pricing #basic ul {
-    padding: 1rem 0 0;
+    padding: var(--small) 0 0;
 }
 
 #pricing .price {
@@ -400,9 +411,9 @@ ARRUMAR OS PADDINGS DE FORA
 }
 
 #pricing .subtitle h5 {
-    font-size: 16px;
+    font-size: var(--small);
     font-weight: 600;
-    line-height: 1.5rem;
+    line-height: calc( 1.5 * var(--small) );
 }
 
 #pricing .title {
@@ -410,18 +421,18 @@ ARRUMAR OS PADDINGS DE FORA
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: var(--medium);
 }
 
 #pricing article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem calc( 1.5 * var(--small) );
     background-color: #fff;
-    border-radius: 16px;
-    line-height: 1.5rem;
-    margin-bottom: 2rem;
+    border-radius: var(--small);
+    line-height: calc( 1.5 * var(--small) );
+    margin-bottom: var(--medium);
 }
 
 #pricing article .button {
@@ -432,7 +443,7 @@ ARRUMAR OS PADDINGS DE FORA
 }
 
 #pricing article .button a {
-    font-size: 1rem;
+    font-size: var(--small);
 }
 
 #pricing article .title {
@@ -440,24 +451,15 @@ ARRUMAR OS PADDINGS DE FORA
     align-items: flex-start;
 }
 
-#basic-plan {
-    display: flex;
-    align-items: center;
-}
-
 #pricing article .title .highlight {
     margin-bottom: 0;
     padding: 1.5px 10.5px;
 }
 
-#pannels {
-    padding: 0 var(--margin-right) 0 var(--margin-right)
-}
-
 #pricing article .title h4 {
-    font-size: 1.5rem;
+    font-size: calc( 1.5 * var(--small) );
     font-weight: 600;
-    line-height: 2rem;
+    line-height: var(--medium);
     margin: 0;
     margin-right: .5rem;
 }
@@ -473,7 +475,7 @@ ARRUMAR OS PADDINGS DE FORA
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin-bottom: var(--small-spacing); 
+    margin-bottom: var(--small); 
 }
 
 #pricing article h4 {
@@ -484,22 +486,15 @@ ARRUMAR OS PADDINGS DE FORA
 }
 
 #pricing article ul {
-    padding: 2rem 0 1rem;
-    gap: 16px;
-}
-
-.features {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    column-gap: 2rem;
+    padding: var(--medium) 0 var(--small);
+    gap: var(--small);
 }
 
 #pricing article ul li {
     display: flex;
     flex-direction: row;
     column-gap: .75rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--small);
 }
 
 #pricing li {
@@ -512,6 +507,17 @@ ARRUMAR OS PADDINGS DE FORA
     width: 335px;
 }
 
+:root {
+    --margin-top: 3.2vw;
+    --margin-left: calc(28vw/3);
+    --margin-right: calc(16vw/3);
+    --main-font: "Inter", sans-serif;
+    --small: 1rem;
+    --medium: 2rem;
+    --title-font: "Plus Jakarta Sans", sans-serif;
+    --section-font: "Poppins", sans-serif;
+}
+
 #section1 {
     padding-top: 2.5rem;
     padding-left: var(--margin-right);
@@ -522,17 +528,16 @@ ARRUMAR OS PADDINGS DE FORA
     flex-direction: row;
     column-gap: .75rem;
     padding-top: calc(2 * var(--margin-right));
-    padding-bottom: 2rem;
+    padding-bottom: var(--medium);
     align-items: center;
 }
 
 #section1 h2 {
-    display: flex;
-    flex-direction: column;
     font-size: 2.5rem;
     line-height: 3rem;
-    padding-top: var(--small-spacing);
+    padding-top: var(--small);
     font-weight: 600;
+    padding-right: 20px;
 }
 
 .section2 {
@@ -542,15 +547,15 @@ ARRUMAR OS PADDINGS DE FORA
 }
 
 .section2 #big-number {
-    padding: var(--small-spacing) 0;
+    padding: var(--small) 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: var(--small);
 }
 
 .section2 #big-number h4 {
-    font-size: 32px;
+    font-size: var(--medium);
     font-weight: 600;
     line-height: 2.4rem;
 }
@@ -560,18 +565,18 @@ ARRUMAR OS PADDINGS DE FORA
     line-height: 26px;
 }
 
+.section2 #button2 {
+    margin: calc( 1.5 * var(--small) ) 0 2.5rem;
+}
+
 .section2 .button {
     text-align: center;
     width: 50%;
     padding: 16.5px 9.75px;
 }
 
-.section2 #button2 {
-    margin: 1.5rem 0 2.5rem;
-}
-
 .section2 .button a {
-    font-size: 16px;
+    font-size: var(--small);
 }
 
 .store {
@@ -582,13 +587,13 @@ ARRUMAR OS PADDINGS DE FORA
 #tables {
     padding: 4.3125rem var(--margin-right) 0;
     overflow: hidden;
-    width: calc(268vw/3);
+    max-width: calc(268vw/3);
 }
 
 .title h3 {
-    font-size: 32px;
+    font-size: var(--medium);
     line-height: 2.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--small);
     font-weight: 600;
 }
 
@@ -598,7 +603,13 @@ ARRUMAR OS PADDINGS DE FORA
     font-weight: 500;
 }
 
-@media screen and ( min-width: 844px ) {
+@media screen and ( min-width: 768px ) {
+    #section1 h2 {
+        font-size: 56px;
+    }
+}
+
+@media screen and ( min-width: 1024px ) {
    .footerSect1 {
     display: flex;
     flex-direction: row;
@@ -610,18 +621,18 @@ ARRUMAR OS PADDINGS DE FORA
    }
 
    .logo-div span {
-        padding: 2rem 0 0;
+        padding: var(--medium) 0 0;
    }
 
    .links-footer {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
-    column-gap: var(--small-spacing);
+    column-gap: var(--small);
     font-weight: 700;
     padding-bottom: 4rem;
    }
     .footer .store span {
-        padding-bottom: 1rem;
+        padding-bottom: var(--small);
     }
 
     .icons {
@@ -630,7 +641,7 @@ ARRUMAR OS PADDINGS DE FORA
     
     .footer .last .mobile {
         display: none;
-        padding-top: 2rem;
+        padding-top: var(--medium);
     }
 
     .last .desktop {
@@ -643,20 +654,20 @@ ARRUMAR OS PADDINGS DE FORA
     }
 
     .last::before {
-        margin-bottom: 2rem;
+        margin-bottom: var(--medium);
     }
 
     .last .desktop span {
         color: #fff;
         padding: 0;
-        line-height: 1.5rem;
+        line-height: calc( 1.5 * var(--small) );
     }
 
     .last .desktop .last-icons {
         display: flex;
         flex-direction: row;
-        column-gap: 1.5rem;
-        font-size: 1.5rem;
+        column-gap: calc( 1.5 * var(--small) );
+        font-size: calc( 1.5 * var(--small) );
     }
 
     .header {
@@ -669,7 +680,7 @@ ARRUMAR OS PADDINGS DE FORA
         padding: 16.5px 29.75px;
     }
     .header .button a {
-        font-size: 16px;  
+        font-size: var(--small);  
     }
 
     .header-main {
@@ -685,10 +696,10 @@ ARRUMAR OS PADDINGS DE FORA
 
     .links-header {
         display: flex;
-        column-gap: 2rem;
+        column-gap: var(--medium);
     }
     .links-header a {
-        font-size: 16px;
+        font-size: var(--small);
         font-weight: 500;
         line-height: 26px;
         color: #1D1E25;
@@ -696,12 +707,14 @@ ARRUMAR OS PADDINGS DE FORA
     }
 
     #section1 {
+        position: relative;
         padding: 102px 0 0 5rem;
     }
 
     #section1 h2 {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        padding-top: 1rem;
+        font-family: var(--title-font);
+        padding-top: var(--small);
+        padding-right: 0;
         font-size: 72px;
         line-height: 86.4px;
         font-weight: 700;
@@ -710,28 +723,36 @@ ARRUMAR OS PADDINGS DE FORA
     .main-section {
         display: flex;
         align-items: center;
+        flex-direction: row;
         column-gap: 5rem;
     }
+
     #tables {
-        min-width: 533px;
+        min-width: 37vw;
         padding: 0 2.5rem 0 0;
         overflow: hidden;
     }
 
-    /*colocar todos os buttons em absolute e arrumar a largura tbm*/
+    .extra-info {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-bottom: var(--medium);
+    }
+
     #users {
-        position: absolute;
-        left: 588px;
-        top: 758px;
+        position: relative;
         padding: 0;
         gap: 24px;
+        top: -47px;
+        left: 508px;
     }
 
     .arrow-point {
-        position: absolute;
-        left: 24%;
-        top: 503px;
-        padding: 0;
+        position: relative;
+        top: -11px;
+        left: 37.5%;
+        padding: 0 0 146px 0;
         gap: 24px;
     }
 
@@ -744,16 +765,15 @@ ARRUMAR OS PADDINGS DE FORA
     }
 
     #section1 .buttons {
-        column-gap: 2rem;
-        padding-top: 237px;
-        padding-bottom: 2rem;
+        column-gap: var(--medium);
+        padding: 0;
     }
 
     #pannels .pannel #feature {
         width: 112px;
     }
     #section1 .buttons a {
-        font-size: 16px;
+        font-size: var(--small);
     }
     
     .button , .button-negative {
@@ -763,7 +783,6 @@ ARRUMAR OS PADDINGS DE FORA
     .button-negative a {
         padding: 0 2px 0 10px;
     }
-
 
     .div-company {
         display: none;
@@ -782,7 +801,7 @@ ARRUMAR OS PADDINGS DE FORA
         display: flex;
         flex-direction: row-reverse;
         padding-left: 5rem;
-
+        justify-content: space-evenly;
     }
 
     .title h3 , .section2 #big-number h4 {
@@ -791,7 +810,8 @@ ARRUMAR OS PADDINGS DE FORA
     }
 
     .section2 {
-        padding: 8.5rem 7rem 0 5rem;
+        padding: 8.5rem 10vw 0 5rem;
+        
     }
 
     #big_table img {
@@ -801,6 +821,7 @@ ARRUMAR OS PADDINGS DE FORA
     #big_table {
         padding: 7rem 3.75rem 0 0 ;
         overflow: visible;
+        align-self: center;
     }
 
     .section2 .title {
@@ -810,7 +831,7 @@ ARRUMAR OS PADDINGS DE FORA
 
     .section2 .title span {
         font-size: 18px;
-        line-height: 32px;
+        line-height: var(--medium);
         width: 75%;
     }
 
@@ -835,7 +856,7 @@ ARRUMAR OS PADDINGS DE FORA
     }
 
     #pannels .title h3 , #customers .title h3 , #pricing .title h3 {
-        font-family: "Poppins", sans-serif;
+        font-family: var(--section-font);
         font-size: 56px;
         line-height: 120%;
     }
@@ -846,27 +867,29 @@ ARRUMAR OS PADDINGS DE FORA
     }
 
     #pannels .pannel .title h4 {
-        font-size: 32px;
+        font-size: var(--medium);
         font-weight: 600;
         line-height: 120%;
+        padding: var(--medium) 0 var(--small);
     }
 
     #pannels .pannel .title span {
         font-size: 18px;
         font-weight: 500;
-        line-height: 32px;
+        line-height: var(--medium);
     }
 
     #pannels .section2 {
-        padding: 2.8125rem 0 0 0;
+        padding: 2.8125rem 0;
     }
 
     #pannels .section2 .button {
         width: 30%;
-        margin: 3.5rem 0 2.8125rem 0;
+        margin: 3.5rem 0 0 0;
     }
 
     .pannel .learn-more {
+        margin-top: 59px;
         align-self: flex-end;
     }
 
@@ -890,6 +913,7 @@ ARRUMAR OS PADDINGS DE FORA
         margin: 0;
         width: calc(3235vw/72);
         padding: 0 80px 0 0;
+        align-self: center;
     }
 
     #pricing {
@@ -898,16 +922,16 @@ ARRUMAR OS PADDINGS DE FORA
     }
 
     #pricing .highlight {
-        margin-bottom: 1rem;
+        margin-bottom: var(--small);
     }
 
     #pricing #basic {
-        padding: 2rem;
+        padding: var(--medium);
     }
 
     #pricing .title span {
         font-size: 18px;
-        line-height: 32px;
+        line-height: var(--medium);
         width: 42.5%;
     }
 
@@ -930,15 +954,10 @@ ARRUMAR OS PADDINGS DE FORA
         margin: 0;
     }
 
-    #pricing #basic .subtitle {
-        margin-top: 2remm;
-    }
-
-
     #pricing #basic .title span {
         width: 100%;
-        font-size: 1rem;
-        margin-top: .0;
+        font-size: var(--small);
+        margin-top: 0;
     }
 
     #customers .desktop {
@@ -947,18 +966,21 @@ ARRUMAR OS PADDINGS DE FORA
 
     .basic-header {
         display: flex;
-        column-gap: 2rem;
-        padding-bottom: 1.5rem;
+        column-gap: var(--medium);
+        padding-bottom: calc( 1.5 * var(--small) );
     }
 
     #pricing article h3 {
-        margin-bottom: 1rem;
+        margin-bottom: var(--small);
     }
 
     #pricing article {
         margin: 0;
     }
 
+    #customers {
+        padding: 6rem 5.75rem 3.5rem;
+    }
 
     #pricing .basic-header .price h3 {
         font-size: 56px;
@@ -1003,7 +1025,7 @@ ARRUMAR OS PADDINGS DE FORA
     }
 
     #customers .highlight {
-        margin-bottom: 1rem;
+        margin-bottom: var(--small);
     }
 
     .CTA {
@@ -1032,7 +1054,7 @@ ARRUMAR OS PADDINGS DE FORA
     .CTA .title span {
         font-size: 18px;
         font-weight: 500;
-        line-height: 32px;
+        line-height: var(--medium);
         width: 70%;
     }
 
@@ -1040,4 +1062,3 @@ ARRUMAR OS PADDINGS DE FORA
         width: 16.75%;
     }
 }
-
