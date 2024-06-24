@@ -582,7 +582,7 @@ ARRUMAR OS PADDINGS DE FORA
 #tables {
     padding: 4.3125rem var(--margin-right) 0;
     overflow: hidden;
-    max-width: calc(268vw/3);
+    width: calc(268vw/3);
 }
 
 .title h3 {
@@ -715,6 +715,7 @@ ARRUMAR OS PADDINGS DE FORA
     #tables {
         min-width: 533px;
         padding: 0 2.5rem 0 0;
+        overflow: hidden;
     }
 
     /*colocar todos os buttons em absolute e arrumar a largura tbm*/
