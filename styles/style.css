@@ -523,6 +523,7 @@ ARRUMAR OS PADDINGS DE FORA
     column-gap: .75rem;
     padding-top: calc(2 * var(--margin-right));
     padding-bottom: 2rem;
+    align-items: center;
 }
 
 #section1 h2 {
@@ -716,6 +717,15 @@ ARRUMAR OS PADDINGS DE FORA
         padding: 0 2.5rem 0 0;
     }
 
+    /*colocar todos os buttons em absolute e arrumar a largura tbm*/
+    #users {
+        position: absolute;
+        left: 588px;
+        top: 758px;
+        padding: 0;
+        gap: 24px;
+    }
+
     .arrow-point {
         position: absolute;
         left: 24%;
@@ -753,13 +763,6 @@ ARRUMAR OS PADDINGS DE FORA
         padding: 0 2px 0 10px;
     }
 
-    #users {
-        position: absolute;
-        left: 588px;
-        top: 758px;
-        padding: 0;
-        gap: 24px;
-    }
 
     .div-company {
         display: none;
