@@ -44,8 +44,6 @@
 }
 
 .arrow-point img {
-    /*width: 4.5625rem;
-    height: 4.9375rem;*/
     padding-bottom: var(--small-spacing);
 }
 
@@ -53,41 +51,53 @@
     padding-top: 3.5rem;
 }
 
+.body {
+    font-family: var(--font-family);
+}
+
 #big_table {
+    overflow: hidden;
     padding: 3.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+#big_table img {
+    height: 485px;
+}
+
+.button-negative , .button {
+    padding: 14px 16px;
+    border-radius: 6.25rem;
+}
+
+.button-negative a , .button a {
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 1.3125rem;
 }
 
 .button {
-    padding: 14px 16px;
     background-color: #5828E3;
-    border-radius: 6.25rem;
 }
 
 .button a {
     padding: .5rem;
-    font-size: 14px;
-    text-decoration: none;
     color: #fff;
     font-weight: 600;
-    line-height: 1.3125rem;
 }
 
 .button-negative {
     display: flex;
     flex-direction: row;
     border: 1px solid #EDEDED;
-    padding: 14px 16px;
     background-color: #fff;
-    border-radius: 6.25rem;
 }
 
 .button-negative a {
     padding: 0 .5rem 0 .25rem;
-    font-size: 14px;
-    text-decoration: none;
     color: #5828E3;
     font-weight: 700;
-    line-height: 1.3125rem;
 }
 
 .customer-header {
@@ -145,15 +155,16 @@
     color: #7E8492;
 }
 
-.div-company {
+.div-company , .div-company_big {
     display: flex;
     margin-top: 3rem;
-    min-width: 100vw;
+    max-width: 100vw;
     background-color: #5828E3;
     justify-content: center;
+    overflow: hidden;
 }
 
-.div-company img {
+.div-company img , .div-company_big img {
     padding: var(--small-spacing) 0;
 }
 
@@ -169,14 +180,21 @@
 .footer {
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family);
     max-width: 100vw;
     background-color: #070127;
     color: #fff;
     padding: calc(var(--margin-left) * 2.8) var(--margin-left) 0 var(--margin-right);
 }
 
-.footer .last {
+#pannels .pannel #feature {
+    width: 56px;
+}
+
+ .last .desktop {
+    display: none;
+}
+
+.footer .last .mobile {
     display: flex;
     flex-wrap: wrap;
     column-gap: 2.5rem;
@@ -222,6 +240,10 @@
 
 }
 
+.header .button {
+    display: none;
+}
+
 .highlight {
     color: #5828E3;
     font-size: 14px;
@@ -257,7 +279,7 @@
 .last::before {
     display: block;
     content: "";
-    width: 20rem;
+    width: 100%;
     height: 0.0625rem;
     background-color: #7E8492;
 
@@ -297,7 +319,6 @@
 .main {
     min-height: 100vh;
     max-width: 100vw;
-    font-family: var(--font-family);
     color: #1D1E25;
 }
 
@@ -339,11 +360,11 @@
 ARRUMAR OS PADDINGS DE FORA
 */
 #pricing #basic {
+    align-items: flex-start;
     margin: 0;
 }
 
 #pricing #basic ul {
-    align-self: flex-start;
     padding: var(--small-spacing) 0 0;
 }
 
@@ -353,9 +374,12 @@ ARRUMAR OS PADDINGS DE FORA
     align-self: flex-start;
 }
 
-#pricing .price h3 {
+#pricing .price h3 , #pricing .price #money {
     font-size: 2.5rem;
     margin: 0;
+    color: #1D1E25;
+    font-weight: 600;
+    line-height: 44px;
 }
 
 #pricing .price span {
@@ -409,14 +433,22 @@ ARRUMAR OS PADDINGS DE FORA
 }
 
 #pricing article .title {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#basic-plan {
+    display: flex;
+    align-items: center;
 }
 
 #pricing article .title .highlight {
-    margin-right: 4rem;
     margin-bottom: 0;
     padding: 1.5px 10.5px;
+}
+
+#pannels {
+    padding: 0 var(--margin-right) 0 var(--margin-right)
 }
 
 #pricing article .title h4 {
@@ -453,11 +485,18 @@ ARRUMAR OS PADDINGS DE FORA
     gap: 16px;
 }
 
+.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    column-gap: 2rem;
+}
+
 #pricing article ul li {
     display: flex;
     flex-direction: row;
     column-gap: .75rem;
-    margin-bottom: var(--small-spacing);
+    margin-bottom: 1rem;
 }
 
 #pricing li {
@@ -467,6 +506,7 @@ ARRUMAR OS PADDINGS DE FORA
 #redonda {
     padding: 0 var(--margin-right);
     margin: 2.5rem 0 3.5rem;
+    width: 335px;
 }
 
 #section1 {
@@ -491,55 +531,42 @@ ARRUMAR OS PADDINGS DE FORA
     font-weight: 600;
 }
 
-#section2 {
+.section2 {
     padding-top: 3.5rem;
     padding-left: var(--margin-right);
     padding-right: var(--margin-right);
 }
 
-#section2 #big-number {
+.section2 #big-number {
     padding: var(--small-spacing) 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--small-spacing);
+    gap: 1rem;
 }
 
-#section2 #big-number h4 {
+.section2 #big-number h4 {
     font-size: 32px;
     font-weight: 600;
     line-height: 2.4rem;
 }
 
-#section2 #big-number span {
+.section2 #big-number span {
     font-weight: 500;
     line-height: 26px;
 }
 
-#section2 .button {
+.section2 .button {
     text-align: center;
     width: 50%;
     padding: 16.5px 9.75px;
 }
 
-#section2 .button a {
-    font-size: 16px;
-}
-
-#section3 {
-    padding-top: 3.5rem;
-    padding-left: var(--margin-right);
-    padding-right: var(--margin-right);
-}
-
-#section3 .button {
+.section2 #button2 {
     margin: 1.5rem 0 2.5rem;
-    text-align: center;
-    width: 50%;
-    padding: 16.5px 15.25px;
 }
 
-#section3 .button a {
+.section2 .button a {
     font-size: 16px;
 }
 
@@ -549,14 +576,15 @@ ARRUMAR OS PADDINGS DE FORA
 }
 
 #tables {
-    padding-top: 4.3125rem;
-    padding-right: var(--margin-right);
+    padding: 4.3125rem var(--margin-right) 0;
+    overflow: hidden;
+    max-width: calc(268vw/3);
 }
 
 .title h3 {
     font-size: 32px;
     line-height: 2.4rem;
-    margin-bottom: var(--small-spacing);
+    margin-bottom: 1rem;
     font-weight: 600;
 }
 
@@ -574,6 +602,352 @@ ARRUMAR OS PADDINGS DE FORA
    }
 
    .footer {
-    padding-top: 4rem;
+    padding: 4rem 7rem 0;
    }
+
+   .logo-div span {
+        padding: 2rem 0 0;
+   }
+
+   .links-footer {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: var(--small-spacing);
+    font-weight: 700;
+    padding-bottom: 4rem;
+   }
+    .footer .store span {
+        padding-bottom: 1rem;
+    }
+
+    .icons {
+        display: none;
+    }
+    
+    .footer .last .mobile {
+        display: none;
+        padding-top: 2rem;
+    }
+
+    .last .desktop {
+        display: flex;
+        flex-direction: row;
+        color: #7E8492;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 3rem;
+    }
+
+    .last::before {
+        margin-bottom: 2rem;
+    }
+
+    .last .desktop span {
+        color: #fff;
+        padding: 0;
+        line-height: 1.5rem;
+    }
+
+    .last .desktop .last-icons {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .header {
+        padding: 24px 80px;
+    }
+
+    .header .button {
+        display: block;
+        font-weight: 700;
+        padding: 16.5px 29.75px;
+    }
+    .header .button a {
+        font-size: 16px;  
+    }
+
+    .header-main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2.5rem;
+    }
+
+    .burger-bar {
+        display: none;
+    }
+
+    .links-header {
+        display: flex;
+        column-gap: 2rem;
+    }
+    .links-header a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #1D1E25;
+        text-decoration: none;
+    }
+
+    #section1 {
+        padding: 102px 0 0 5rem;
+    }
+
+    #section1 h2 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        padding-top: 1rem;
+        font-size: 72px;
+        line-height: 86.4px;
+        font-weight: 700;
+    }
+
+    .main-section {
+        display: flex;
+        align-items: center;
+        column-gap: 5rem;
+    }
+    #tables {
+        min-width: 533px;
+        padding: 0 2.5rem 0 0;
+    }
+
+    .arrow-point {
+        position: absolute;
+        left: 344px;
+        top: 503px;
+        padding: 0;
+        gap: 24px;
+    }
+
+    .arrow-point span {
+        padding-top: 36px;
+        font-size: 18px;
+        font-weight: 550;
+        line-height: 120%;
+        width: 40%;
+    }
+
+    #section1 .buttons {
+        column-gap: 2rem;
+        padding-top: 237px;
+        padding-bottom: 2rem;
+    }
+
+    #pannels .pannel #feature {
+        width: 112px;
+    }
+    #section1 .buttons a {
+        font-size: 16px;
+    }
+    
+    .button , .button-negative {
+        padding: 15.5px 22.75px;
+    }
+
+    .button-negative a {
+        padding: 0 2px 0 10px;
+    }
+
+    #users {
+        position: absolute;
+        left: 588px;
+        top: 758px;
+        padding: 0;
+        gap: 24px;
+    }
+
+    .div-company {
+        display: none;
+    }
+
+    .div-company_big {
+        display: flex;
+        margin-top: 90px;
+    }
+
+    .div-company_big img {
+        padding: 36px 0;
+    }
+
+    #insights {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 5rem;
+
+    }
+
+    .title h3 , .section2 #big-number h4 {
+        font-size: 48px;
+        line-height: 120%; 
+    }
+
+    .section2 {
+        padding: 8.5rem 7rem 0 5rem;
+    }
+
+    #big_table img {
+        height: 529px;
+    }
+
+    #big_table {
+        padding: 7rem 3.75rem 0 0 ;
+        overflow: visible;
+    }
+
+    .section2 .title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section2 .title span {
+        font-size: 18px;
+        line-height: 32px;
+        width: 75%;
+    }
+
+    .section2 #big-number {
+        padding: 2.5625rem 0;
+        width: 75%;
+    }
+
+    #pannels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 12rem 8rem 6rem 5rem;
+        gap: 4.0625rem 3.1875rem;
+    }
+
+    #pannels .pannel {
+        margin: 0;
+        padding: 3.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pannels .title h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 56px;
+        line-height: 120%;
+    }
+
+    #pannels .title span {
+        width: 60%;
+        line-height: 120%;
+    }
+
+    #pannels .pannel .title h4 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 120%;
+    }
+
+    #pannels .pannel .title span {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+
+    #pannels .section2 {
+        padding: 2.8125rem 0 0 0;
+    }
+
+    #pannels .section2 .button {
+        width: 30%;
+        margin: 3.5rem 0 2.8125rem 0;
+    }
+
+    .pannel .learn-more {
+        align-self: flex-end;
+    }
+
+    #satisfaction {
+        display: flex;
+        align-items: flex-start;
+        padding: 96px 0;
+    }
+
+    #satisfaction .section2 {
+        padding-right: 2.5rem;
+        padding-top: 0;
+
+    }
+
+    #satisfaction .button {
+        width: 28.5%;
+    }
+
+    #redonda {
+        margin: 0;
+        width: calc(3235vw/72);
+        padding: 0 80px 0 0;
+    }
+
+    #pricing {
+        background-color: #FCFBFF;
+        padding-top: 96px;
+    }
+
+    #pricing .highlight {
+        margin-bottom: 1rem;
+    }
+
+    #pricing .title h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 56px;
+    }
+
+    #pricing #basic {
+        padding: 2rem;
+    }
+
+    #pricing .title span {
+        font-size: 18px;
+        line-height: 32px;
+        width: 42.5%;
+    }
+
+    .plans {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        column-gap: 2.5rem;
+    }
+
+    .features {
+        flex-direction: row;
+        padding-bottom: 72px;
+    }
+
+    #pricing #basic .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #pricing #basic .title span {
+        width: 100%;
+    }
+
+    #customers .desktop {
+        display: flex;
+    }
+
+    .basic-header {
+        display: flex;
+        column-gap: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    #pricing .basic-header .price h3 {
+        font-size: 56px;
+    }
+
+    #pricing .price #money {
+        font-size: 36px;
+        padding: 3px 2px 20px;
+        align-self: flex-start;
+    }
 }
