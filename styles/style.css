@@ -92,6 +92,7 @@
     flex-direction: row;
     border: 1px solid #EDEDED;
     background-color: #fff;
+    align-items: center;
 }
 
 .button-negative a {
@@ -717,7 +718,7 @@ ARRUMAR OS PADDINGS DE FORA
 
     .arrow-point {
         position: absolute;
-        left: 344px;
+        left: 24%;
         top: 503px;
         padding: 0;
         gap: 24px;
@@ -1005,10 +1006,34 @@ ARRUMAR OS PADDINGS DE FORA
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding: 87px 80px;
     }
 
     .CTA img {
         display: block;
+    }
+
+    .CTA .title h3 {
+        font-size: 56px;
+        line-height: 130%;
+        width: 80%;
+    }
+
+    .CTA .title {
+        padding-left: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CTA .title span {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+        width: 70%;
+    }
+
+    .CTA .button {
+        width: 16.75%;
     }
 }
 
