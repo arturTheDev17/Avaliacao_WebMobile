@@ -501,10 +501,16 @@
     list-style: none;
 }
 
+#satisfaction {
+    display: flex;
+    flex-direction: column;
+}
+
 #redonda {
     padding: 0 var(--margin-right);
     margin: 2.5rem 0 3.5rem;
     width: 335px;
+    align-self: center;
 }
 
 :root {
@@ -715,8 +721,9 @@
         font-family: var(--title-font);
         padding-top: var(--small);
         padding-right: 0;
-        font-size: 72px;
-        line-height: 86.4px;
+        padding-bottom: 2rem;
+        font-size: 64px;
+        line-height: 76.8px;
         font-weight: 700;
     }
 
@@ -815,7 +822,7 @@
     }
 
     #big_table img {
-        height: 529px;
+        height: calc(2645vw/72);
     }
 
     #big_table {
@@ -896,6 +903,7 @@
     #satisfaction {
         display: flex;
         align-items: flex-start;
+        flex-direction: row;
         padding: 96px 0;
     }
 
@@ -913,7 +921,6 @@
         margin: 0;
         width: calc(3235vw/72);
         padding: 0 80px 0 0;
-        align-self: center;
     }
 
     #pricing {
@@ -1060,5 +1067,13 @@
 
     .CTA .button {
         width: 16.75%;
+    }
+}
+
+@media screen and ( min-width: 1440px ) {
+    #section1 h2 {
+        padding-bottom: 0;
+        font-size: 72px;
+        line-height: 86.4px;
     }
 }
