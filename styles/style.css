@@ -33,15 +33,8 @@
     padding-right: var(--margin-right);
 }
 
-.CTA .button {
-    text-align: center;
-    width: 50%;
-    padding: 16.5px 9.75px;
+.CTA .button-link {
     margin: var(--medium) 0;
-}
-
-.CTA .button a {
-    font-size: var(--small);
 }
 
 .CTA img {
@@ -87,8 +80,34 @@
     font-family: var(--main-font);
 }
 
+a .button , .button-link {
+    width: 161px;
+    height: 49px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.button-link {
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+}
+
 .button {
     background-color: var(--main-purple);
+    transition: 0.3s;
+}
+
+.button-link:hover {
+    color: var(--main-purple);
+}
+
+.button:hover , .button-negative:hover {
+    background-color: var(--lighter-purple);
+    transition: 0.3s;
 }
 
 .button a {
@@ -103,6 +122,7 @@
     border: 1px solid #EDEDED;
     background-color: var(--white);
     align-items: center;
+    transition: 0.3s;
 }
 
 .button-negative , .button {
@@ -135,10 +155,6 @@
 }
 
 #customers .button {
-    margin: calc( 1.5 * var(--small) ) 0 2.5rem;
-    text-align: center;
-    width: 50%;
-    padding: 16.5px 15.25px;
     align-self: center;
 }
 
@@ -455,11 +471,8 @@
     margin-bottom: var(--medium);
 }
 
-#pricing article .button {
-    padding: 15px 0;
+#pricing article .button , #pricing article .button-link {
     width: 100%;
-    text-align: center;
-    
 }
 
 #pricing article .button a {
@@ -580,14 +593,8 @@
     line-height: 26px;
 }
 
-.section2 #button2 {
-    margin: calc( 1.5 * var(--small) ) 0 2.5rem;
-}
-
-.section2 .button {
-    text-align: center;
-    width: 50%;
-    padding: 16.5px 9.75px;
+#insights .button , #insights .button-link , #satisfaction .button , #satisfaction .button-link {
+    width: 187px;
 }
 
 .section2 .button a {
@@ -690,12 +697,15 @@
     }
 
     .header .button {
-        display: block;
+        display: flex;
         font-weight: 700;
-        padding: 16.5px 29.75px;
-    }
-    .header .button a {
+        width: 181px;
+        height: 54px;
         font-size: var(--small);  
+    }
+
+    .buttons a .button {
+        width: 194px;
     }
 
     .header-main {
@@ -899,8 +909,7 @@
         padding: 2.8125rem 0;
     }
 
-    #pannels .section2 .button {
-        width: 30%;
+    #pannels .section2 .button-link {
         margin: 3.5rem 0 0 0;
     }
 
@@ -922,10 +931,6 @@
 
     }
 
-    #satisfaction .button {
-        width: 28.5%;
-    }
-
     #redonda {
         margin: 0;
         width: calc(3235vw/72);
@@ -935,10 +940,6 @@
     #pricing {
         background-color: #FCFBFF;
         padding-top: 96px;
-    }
-
-    #pricing .highlight {
-        margin-bottom: var(--small);
     }
 
     #pricing #basic {
@@ -1035,13 +1036,10 @@
         grid-column:span 3;
     }
 
-    #customers .button {
-        width: 13%;
+    #customers .button-link {
         margin-top: 80px;
-    }
-
-    #customers .highlight {
-        margin-bottom: var(--small);
+        margin-bottom: 40px;
+        align-self: center;
     }
 
     .CTA {
@@ -1074,9 +1072,15 @@
         width: 70%;
     }
 
-    .CTA .button {
-        width: 16.75%;
+    a .button , .button-link {
+        width: 198px;
+        height: 54px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
 }
 
 @media screen and ( min-width: 1440px ) {
