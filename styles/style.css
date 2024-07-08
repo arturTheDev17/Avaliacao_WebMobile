@@ -57,7 +57,7 @@
 }
 
 .arrow-point img {
-    padding-bottom: var(--small);
+    padding-bottom: calc( var(--small) *1.5 );
 }
 
 .arrow-point span {
@@ -235,8 +235,10 @@ a .button , .button-link , a .button-negative {
     padding-bottom: 3.5rem;
 }
 
-.footer .last span {
+.footer .last a , .footer .last span {
     padding: calc( 1.5 * var(--small) ) 0rem 0rem 0rem;
+    color: var(--white);
+    text-decoration: none;
 }
 
 .footer .store a {
@@ -344,6 +346,15 @@ a .button , .button-link , a .button-negative {
     list-style: none;
     gap: var(--small);
     padding: var(--medium) 0rem 0rem 0rem;
+}
+
+.links-footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.links-footer a:hover {
+    color: var(--light-gray);
 }
 
 .links-header {

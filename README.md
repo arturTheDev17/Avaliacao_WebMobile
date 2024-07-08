@@ -8,7 +8,8 @@ Este README.md está dentro da pasta compactada do projeto.
 Você pode visualizar o projeto nas seguintes maneiras: 
 - Abrindo diretamente através do index.html (ATENÇÃO: Talvez algumas imagens não carreguem);
 - Abrindo através da extensão Live Server do Visual Studio Code (que foi utilizada durante o desenvolvimento para fazer a visualização);
-- Se você estiver lendo este README próximo à data 04/07/2024, você provavelmente poderá visualizar o site acessando o [link](https://arturnevesh.neocities.org/).
+
+- OBS: Se esta versão do website estiver desatualizada, você pode fazer download dele no github.
 
 ### 📋 Pré-requisitos
 
@@ -22,6 +23,10 @@ Assim, será necessário possuir:
 Visual Studio Code
 Extensão Live Server
 ```
+
+### ☁ Repositório do GitHub
+
+Você pode fazer download da pasta compactada contendo a versão mais recente do website no meu repositório do [GitHub](https://github.com/arturTheDev17/Avaliacao_WebMobile).
 
 ### 🔧 Instalação
 
