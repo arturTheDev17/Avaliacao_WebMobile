@@ -400,6 +400,10 @@ a .button , .button-link , a .button-negative {
     padding: 0 var(--margin-right) 0 var(--margin-right)
 }
 
+#pannels .section2 {
+    padding: 56px 0 0;
+}
+
 #pannels .pannel #feature {
     width: 56px;
 }
@@ -537,6 +541,10 @@ a .button , .button-link , a .button-negative {
 #satisfaction {
     display: flex;
     flex-direction: column;
+}
+
+#satisfaction .button-link {
+    margin-top: calc(var(--small)*1.5);
 }
 
 #redonda {
@@ -1064,11 +1072,10 @@ a .button , .button-link , a .button-negative {
         width: 70%;
     }
 
-    a .button , .button-link {
+    a .button , .button-link , .buttons .button-link .button , .buttons .button-link .button-negative , .buttons .button-link {
         width: 198px;
         height: 54px;
     }
-
 }
 
 @media screen and ( min-width: 1440px ) {
@@ -1077,4 +1084,5 @@ a .button , .button-link , a .button-negative {
         font-size: 72px;
         line-height: 86.4px;
     }
+
 }
