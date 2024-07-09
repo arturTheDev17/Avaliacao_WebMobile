@@ -28,6 +28,8 @@ Extensão Live Server
 
 Você pode fazer download da pasta compactada contendo a versão mais recente do website no meu repositório do [GitHub](https://github.com/arturTheDev17/Avaliacao_WebMobile).
 
+Ao acessar o link, clique em "<> Code" e então "Download ZIP"
+
 ### 🔧 Instalação
 
 Se não possui o Visual Studio Code você pode instalá-lo [aqui](https://code.visualstudio.com/)
