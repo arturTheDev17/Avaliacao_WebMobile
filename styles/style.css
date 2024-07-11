@@ -425,7 +425,6 @@
 
 #pricing .price {
     display: flex;
-    justify-content: center;
     align-self: flex-start;
 }
 
@@ -439,7 +438,7 @@
 
 #pricing .price span {
     padding-left: .125rem;
-    align-self: center;
+    align-self: flex-end;
     line-height: 1.625rem;
     color: var(--light-gray);
     font-weight: 500;
@@ -480,8 +479,9 @@
     width: 100%;
 }
 
+
 #pricing #basic .button-link {
-    margin-top: var( --small );
+    margin-top: calc( 1.5 * var(--small) );
 }
 
 #pricing article .title {
@@ -646,6 +646,36 @@
     font-weight: 500;
 }
 
+@media screen and ( min-width: 425px ) {
+    #pricing #basic {
+        align-items: center;
+    }
+
+    #pricing #basic .subtitle {
+        align-self: center;
+    }
+}
+
+@media screen and ( min-width: 768px ) {
+    #section1 h2 {
+        font-size: 56px;
+    }
+
+    
+    .div-company {
+        display: none;
+    }
+
+    .div-company_big {
+        display: flex;
+        margin-top: 90px;
+    }
+
+    .div-company_big img {
+        padding: 36px 0;
+    }
+}
+
 @media screen and ( min-width: 1024px ) {
     #big_table {
         padding: 7rem 3.75rem 0 0 ;
@@ -691,7 +721,7 @@
     }
 
     #customers .title h3 {
-        width: 50%;
+        width: 60%;
     }
 
     #insights {
@@ -757,6 +787,10 @@
         padding-top: 96px;
     }
 
+    #pricing #basic .subtitle {
+        align-self: flex-start;
+    }
+
     #pricing #basic {
         padding: var(--medium);
     }
@@ -772,6 +806,10 @@
         width: 100%;
         font-size: var(--small);
         margin-top: 0;
+    }
+
+    #pricing #basic .button-link {
+        margin-top: 6px;
     }
 
     #pricing .basic-header .price h3 {
@@ -909,7 +947,7 @@
     .basic-header {
         display: flex;
         column-gap: var(--medium);
-        padding-bottom: calc( 1.5 * var(--small) );
+        padding-bottom: var(--small);
     }
 
     .burger-bar {
@@ -924,19 +962,6 @@
     .button-link .button , .button-link {
         width: 198px;
         height: 54px;
-    }
-
-    .div-company {
-        display: none;
-    }
-
-    .div-company_big {
-        display: flex;
-        margin-top: 90px;
-    }
-
-    .div-company_big img {
-        padding: 36px 0;
     }
 
     .extra-info {
@@ -1099,12 +1124,6 @@
    }
 }
 
-@media screen and ( min-width: 768px ) {
-    #section1 h2 {
-        font-size: 56px;
-    }
-}
-
 @media screen and ( min-width: 1440px ) {
     #section1 h2 {
         padding-bottom: 0;
@@ -1113,3 +1132,4 @@
     }
 
 }
+
